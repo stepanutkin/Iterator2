@@ -8,7 +8,7 @@ void print_container(const Container& cont) {
     for (const auto& element : cont) {
         std::cout << element;
         // Добавим запятую и пробел после каждого элемента, кроме последнего
-        if (&element != &(*cont.rbegin()))
+        if (element != *cont.rbegin())
             std::cout << ", ";
     }
     std::cout << std::endl;
